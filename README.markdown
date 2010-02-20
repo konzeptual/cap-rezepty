@@ -1,0 +1,1 @@
+Private capistrano recepies for comfortable deployment.
