@@ -28,7 +28,7 @@ namespace :deploy do
     fetch(:shared_dirs, '').each do |dir|
       puts "dir = #{dir}"
       roles[:app].servers.each do |server|
-        exec "rsync -avz #{user}@#{server.host}:#{shared_path}/#{dir} #{dir}"
+        exec "rsync -avz #{user}@#{server.host}:#{shared_path}/#{dir}/ #{dir}"
       end
     end
   end
