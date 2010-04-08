@@ -7,6 +7,6 @@ Private capistrano recepies for comfortable deployment.
       git submodule add git@github.com:krick/cap-rezepty.git config/deploy/recipies/cap-rezepty
 in ./config/deploy.rb
 
-    load File.join(File.dirname(__FILE__), 'deploy/recipies/cap-rezepty/cap_rezepty.rb') if respond_to?(:namespace) # cap2 differentiator
+    load File.join(File.dirname(__FILE__), 'deploy/recipies/cap-rezepty/cap_rezepty.rb') if respond_to?(:namespace)
       
  
