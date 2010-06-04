@@ -18,6 +18,11 @@ namespace :log do
     exec "echo 'file = #{target_file}'"
     exec "echo =============="
   end
+  task :get do
+    target_file = "/tmp/#{rails_env}.log"
+    remote_log_file = "#{current_path}/log/#{rails_env}.log"
+    download remote_log_file, target_file, :via => :scp
+  end
 end
 
 namespace :rake do
