@@ -13,15 +13,15 @@ namespace :deploy do
     end
   end
 
-  desc "Upload shared directories to remote server"
-  task :upload_shared_dirs do
-    fetch(:shared_dirs, '').each do |dir|
-      puts "dir = #{dir}"
-      roles[:app].servers.each do |server|
-        exec "rsync -avz #{dir}/ #{user}@#{server.host}:#{shared_path}/#{dir}"
-      end
-    end
-  end
+  # desc "Upload shared directories to remote server"
+  # task :upload_shared_dirs do
+  #   fetch(:shared_dirs, '').each do |dir|
+  #     puts "dir = #{dir}"
+  #     roles[:app].servers.each do |server|
+  #       exec "rsync -avz #{dir}/ #{user}@#{server.host}:#{shared_path}/#{dir}"
+  #     end
+  #   end
+  # end
 
   desc "Download shared directories from remote server"
   task :download_shared_dirs do
